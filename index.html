@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avenger movies heroes</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Avenger movie heroes</h1>
+        <div class="container-img">
+            <div class="image-container">
+            <img src="thor.jpeg" alt="">
+            <div class="image-text thor-text">Thor is a god of thunder</div>
+        </div>
+        <div class="image-container">
+            <img src="ironman.jpeg" alt="">
+            <div class="image-text ironman-text">Iron man is Tony Stark</div>
+            </div>
+            <div class="image-container">
+            <img src="download.jpeg" alt="">
+            <div class="image-text spider-text">Peter Parker is spiderman</div>
+            </div>
+            <div class="image-container">
+            <img class="img4" src="hulk.jpeg" alt="">
+            <div class="image-text hulk-text">Hulk is green.</div>
+        </div>
+    </div>
+    <style>
+        body{
+            background-color: black;
+        }
+        h1
+        {
+            display: flex;
+          justify-content: center;
+          align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+       .image-text{
+        color: white;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        transition: 2 3s ease;
+       }
+  .image-container{
+    display: inline-block;
+    position: relative;
+  }
+  .image-container:hover .image-text{
+    opacity: 1;
+  }
+
+  .thor-text { color: #4b8bff; }
+        .ironman-text { color: #ff4b4b; }
+        .spider-text { color: #3a75ff; }
+        .hulk-text { color: #4bff5e; }
+ 
+.container-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 40px;
+            gap: 10px;
+        }
+        .container-img img{
+            border: 2px solid white;
+            width: 60px;
+            height: 500px; 
+            position: relative;
+            border-radius: 20px;
+            object-fit: cover;
+            transition: all 0.5s ease-in-out;
+        }
+        .container-img img:hover{
+            cursor: pointer;
+            transition: 1s;
+            width:300px;
+            opacity: 0.5;
+        }
+        @media (max-width: 480px) {
+            .container-img {
+                flex-direction: row;
+                align-items: center;
+            }
+            .container-img img{
+                height: 400px;
+                width: 70px;
+            }
+            .image-container {
+                width: 80px;
+                height: 200px;
+            }
+            
+            .image-container:hover {
+                width: 200px;
+                height: 250px;
+            }
+        }
+    </style>
+
+</body>
+</html>
